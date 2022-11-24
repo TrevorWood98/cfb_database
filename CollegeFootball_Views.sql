@@ -3,7 +3,7 @@ use cfb_statrec;
 create view team_rank as
 select t.school, s.year, wins, losses, ap_post as final_rank,
 case when (ap_post <= 25 and ap_post >= 11) then 'Good'
-	when (ap_post <= 11 and ap_post >= 5)  then 'Great'
+    when (ap_post <= 11 and ap_post >= 5)  then 'Great'
     when (ap_post <= 5 and ap_post >= 1) then 'Elite'
     end as TeamIs
 from teamseason
